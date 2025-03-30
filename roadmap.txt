@@ -1,0 +1,43 @@
+1. Sign Up page
+	- Admin
+		- control both student and faculty dashboard
+	- faculty
+		- upload faculty id 
+		- email
+		- password
+		- verification
+	- student
+		- upload student id
+		- email
+		- password
+		- verification
+2. Login page
+	- email
+	- password
+3. Admin Dashboard
+	- set all the things on student and faculty dashboard 
+	- contain all information about the faculty and students 
+4. Faculty Dashboard
+	- upload time table
+	- get reminders for pending tasks 
+	- get notifications regarding the lectures, subject and class
+	- can change the timetable
+	- can swap the lectures with other faculty
+	- upload attendance via google form
+	- that google form will have names of that class and by default the attendance is marked 	  present
+	- view past records
+	- can view all students attendance in one sheet 
+	- can set minimum criteria of attendance and can see which student is not fulfilling its 	  criteria
+	- also has one extra sheet in which the records of students involved in other activities 	  are maintained such as attendance, name of event etc.
+	- can upload study material for students
+5. Student Dashboard
+	- can see their time table
+	- can also see if the lectures are swapped or not
+	- can also see if the faculty is arriving or not
+	- tasks to do with their deadline set by themselves and given by their faculty
+	- can see if their attendance is marked or not in every other lecture
+	- can send their applications to their faculty regarding leave or any other thing
+	- get reminders for the tasks that are pending
+	- get notifications regarding lectures and all
+	- get warning if their attendance is less
+	- can get study materials uploaded by faculty
