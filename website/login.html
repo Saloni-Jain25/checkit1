@@ -10,7 +10,7 @@
 <body>
   <div class="form-container">
     <h2>Login to CheckIT</h2>
-    <form onsubmit="return validateCaptcha('loginCaptchaText', 'loginCaptchaInput')">
+    <form action="login_process.jsp" method="post" onsubmit="return validateCaptcha('loginCaptchaText', 'loginCaptchaInput')">
 <label>Email</label>
 <input
   type="email"
@@ -33,8 +33,6 @@
     </form>
     <p class="switch-link"><center>Don't have an account? <a href="signup.html">Create one</a></center></p>
   </div>
-  Class.forName("com.mysql.cj.jdbc.Driver");
-Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/checkit", "root", "qwerty");
 
 </body>
 </html>
