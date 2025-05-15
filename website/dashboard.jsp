@@ -4,7 +4,6 @@ if (role == null) {
     response.sendRedirect("login.html");
     return;
 }
-
 if (role.equals("student")) {
     response.sendRedirect("student_dashboard.html");
 } else if (role.equals("faculty")) {
