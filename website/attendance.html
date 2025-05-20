@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Attendance Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f9fa;
+      padding: 40px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #2e86de;
+    }
+
+    .form-section {
+      width: 90%;
+      margin: auto;
+      background: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    select {
+      padding: 5px 10px;
+      margin: 10px 20px 10px 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 25px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #2e86de;
+      color: white;
+    }
+
+    .submit-btn {
+      margin-top: 20px;
+      padding: 10px 25px;
+      background-color: #2e86de;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .submit-btn:hover {
+      background-color: #1b4f72;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Attendance Form</h2>
+
+<div class="form-section">
+  <form action="submit_attendance.jsp" method="post">
+
+    <!-- Faculty Name -->
+    <label for="faculty">Faculty Name:</label>
+    <select name="faculty" id="faculty" required>
+      <option value="">--Select Faculty--</option>
+      <option value="Prof. Shahida Khan">Prof. Shahida Khan</option>
+      <option value="Prof. Monika Choudhary">Prof. Monika Choudhary</option>
+      <option value="Prof. Deepak Singh Chouhan">Prof. Deepak Singh Chouhan</option>
+      <option value="Prof. Pawan Makhija">Prof. Pawan Makhija</option>
+      <option value="Prof. Pawan Kumar Gupta">Prof. Pawan Kumar Gupta</option>
+      <option value="Prof. Ankita Agrawal">Prof. Ankita Agrawal</option>
+      <option value="Prof. Kapil Sahu">Prof. Kapil Sahu</option>
+      <option value="Prof. Varsha Choudhary">Prof. Varsha Choudhary</option>
+      <option value="Prof. Disha Sharma">Prof. Disha Sharma</option>
+      <option value="Prof. Mayank Bhatt">Prof. Mayank Bhatt</option>
+      <option value="Prof.(Dr.) Manish Vyas">Prof.(Dr.) Manish Vyas</option>
+      <option value="Prof. Brajesh Chaturvedi">Prof. Brajesh Chaturvedi</option>
+      <option value="Prof. Mahendra Verma">Prof. Mahendra Verma</option>
+      <option value="Prof. Sanjana Sharma">Prof. Sanjana Sharma</option>
+      <option value="Prof. Reshma Shivhare">Prof. Reshma Shivhare</option>
+      <option value="Prof.(Dr.) Prashant Lakkadwala">Prof.(Dr.) Prashant Lakkadwala</option>
+      <!-- Add more faculty as needed -->
+    </select>
+
+    <!-- Branch -->
+    <label for="branch">Branch:</label>
+    <select name="branch" id="branch" required>
+      <option value="">--Select Branch--</option>
+      <option value="IT-1">IT-1</option>
+      <option value="IT-2">IT-2</option>
+      <option value="CSE-DS">CSE-DS</option>
+    </select>
+
+    <!-- Year -->
+    <label for="year">Year:</label>
+    <select name="year" id="year" required>
+      <option value="">--Select Year--</option>
+      <option value="II">II Year</option>
+      <option value="III">III Year</option>
+      <option value="IV">IV Year</option>
+    </select>
+
+    <!-- Subject -->
+    <label for="subject">Subject:</label>
+    <select name="subject" id="subject" required>
+      <option value="ADA">Analysis & Design of Algorithms (ADA)</option>
+      <option value="TOC">Theory of Computation (TOC)</option>
+      <option value="OS">Operating System</option>
+      <option value="PP">Python Programming</option>
+      <option value="AP">Android Programming</option>
+      <option value="DM">Data Mining</option>
+      <option value="MP1">Minor Project</option>
+      <option value="MP2">Major Project</option>
+      <option value="CDC">CDC</option>
+      <option value="BDA">BDA</option>
+      <option value="SE">Software Engineering</option>
+      <option value="NLP">NLP</option>
+      <option value="IDS">Introduction to DS</option>
+      <option value="CA">Computer Architecture</option>
+      <option value="BD">Big Data</option>
+      <option value="CD">Compiler Design</option>
+      <option value="DA">DA in IoT</option>
+      <option value="DBMS">Database Management System</option>
+      <option value="CGMM">Computer Graphics and Multimedia</option>
+      <option value="MATLAB">MATLAB</option>
+      <option value="IP">Internship</option>
+      <option value="AWS">AWS</option>
+      <option value="DS">Data Science</option>
+      <option value="DL">Deep Learning</option>
+      <option value="PDS">Python for Data Science</option>
+      <option value="DSA">Data Structure</option>
+      <option value="CN">Computer Networks</option>
+      <option value="IPCV">Image Processing and Computer Vision</option>
+      <option value="OSS">OSS</option>
+      <option value="BC">BlockChain</option>
+    </select>
+
+    <!-- Time -->
+    <label for="time">Time:</label>
+    <select name="time" id="time" required>
+      <option value="8:20AM-9:05AM">8:20 AM-9:05 AM</option>
+      <option value="8:20AM-9:50AM">8:20 AM-9:50 AM</option>
+      <option value="9:05AM-9:50AM">9:05 AM-9:50 AM</option>
+      <option value="9:05AM-10:40AM">9:05 AM-10:40 AM</option>
+      <option value="9:50AM-10:40AM">9:50 AM-10:40 AM</option>
+      <option value="10:30AM-11:20AM">10:30 AM-11:20 AM</option>
+      <option value="11:20AM-12:10PM">11:20 AM-12:10 PM</option>
+      <option value="12:10PM-1:00PM">12:10 PM-1:00 PM</option>
+      <option value="1:50PM-2:40PM">1:50 PM-2:40 PM</option>
+      <option value="2:40PM-3:30PM">2:40 PM-3:30 PM</option>
+      <option value="3:30PM-4:15PM">3:30 PM-4:15 PM</option>
+      <option value="4:15PM-5:00PM">4:15 PM-5:00 PM</option>
+      <option value="9:50AM-11:20AM">9:50 AM-11:20 AM</option>
+      <option value="10:30AM-12:10PM">10:30 AM-12:10 PM</option>
+      <option value="11:20AM-1:00PM">11:20 AM-1:00 PM</option>
+      <option value="1:50PM-3:30PM">1:50 PM-3:30 PM</option>
+      <option value="2:40PM-4:15PM">2:40 PM-4:15 PM</option>
+      <option value="3:30PM-5:00PM">3:30 PM-5:00 PM</option>
+    </select>
+
+    <!-- Student Attendance Table -->
+    <table>
+      <tr>
+        <th>Sr. No.</th>
+        <th>Student Name</th>
+        <th>Enrollment No</th>
+        <th>Mark Attendance</th>
+      </tr>
+
+      <tr>
+        <td>1</td>
+        <td>Kratika Jain</td>
+        <td>0827IT221079</td>
+        <td>
+          <label><input type="radio" name="attendance_0827IT221079" value="present" required> Present</label>
+          <label><input type="radio" name="attendance_0827IT221079" value="absent"> Absent</label>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Kunal Kushwah</td>
+        <td>0827IT221080</td>
+        <td>
+          <label><input type="radio" name="attendance_0827IT221080" value="present" required> Present</label>
+          <label><input type="radio" name="attendance_0827IT221080" value="absent"> Absent</label>
+        </td>
+      </tr>
+      <!-- Add more students as needed -->
+
+    </table>
+
+    <button type="submit" class="submit-btn">Submit Attendance</button>
+  </form>
+</div>
+
+</body>
+</html>
