@@ -1,31 +1,140 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Faculty Dashboard</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CheckIT - Faculty Dashboard</title>
   <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f4f6f9;
+      color: #333;
+    }
+
+    .navbar {
+      background-color: #2e86de;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .navbar .title {
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    .navbar .links a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: opacity 0.3s ease;
+    }
+
+    .navbar .links a:hover {
+      opacity: 0.8;
+    }
+
+    .container {
+      padding: 40px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 28px;
+      color: #2e86de;
+      margin-bottom: 20px;
+    }
+
+    .dashboard-section {
+      background: white;
+      border-radius: 10px;
+      padding: 25px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .dashboard-section:hover {
+      transform: translateY(-5px);
+    }
+
+    .dashboard-section h3 {
+      margin-top: 0;
+      font-size: 22px;
+      color: #34495e;
+    }
+
+    .dashboard-section p {
+      margin: 10px 0 0;
+      color: #555;
+    }
+
+    .dashboard-section a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #2e86de;
+      text-decoration: none;
+      font-weight: 500;
+    }
+  </style>
 </head>
 <body>
+
 <div class="navbar">
   <div class="title">CheckIT - Faculty</div>
   <div class="links">
-    <a href="#">Home</a>
+    <a href="#home">Home</a>
+    <a href="#attendance">Attendance</a>
+    <a href="#announcements">Announcements</a>
+    <a href="#tasks">Tasks</a>
+    <a href="#timetable">Timetable</a>
+    <a href="#profile">Profile ⌄</a>
     <a href="LogOut.jsp">Logout</a>
   </div>
 </div>
+
 <div class="container">
   <h2>Welcome, Faculty!</h2>
-  <div class="dashboard-section">
+
+  <div id="attendance" class="dashboard-section">
     <h3>✅ Mark Attendance</h3>
-    <p>Submit and review student attendance.</p>
+    <p>Select class, batch, time and mark attendance easily.</p>
+    <a href="attendance.jsp">Go to Attendance</a>
   </div>
-  <div class="dashboard-section">
-    <h3>📤 Upload Notes</h3>
-    <p>Share lecture material with students.</p>
-  </div>
-  <div class="dashboard-section">
+
+  <div id="announcements" class="dashboard-section">
     <h3>📢 Announcements</h3>
-    <p>Create notices for your students.</p>
+    <p>Create, edit or delete announcements for students.</p>
+    <a href="announcements.jsp">Manage Announcements</a>
   </div>
+
+  <div id="tasks" class="dashboard-section">
+    <h3>📝 Tasks</h3>
+    <p>Assign tasks, track deadlines and manage completions.</p>
+    <a href="tasks.jsp">Manage Tasks</a>
+  </div>
+
+  <div id="timetable" class="dashboard-section">
+    <h3>🕒 Timetable</h3>
+    <p>View your weekly teaching timetable.</p>
+    <a href="timetable.jsp">View Timetable</a>
+  </div>
+
+  <div id="profile" class="dashboard-section">
+    <h3>👤 My Profile</h3>
+    <p>View and manage your profile information.</p>
+    <a href="profile.jsp">My Profile</a>
+  </div>
+
 </div>
+
 </body>
 </html>
