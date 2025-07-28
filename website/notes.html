@@ -1,18 +1,54 @@
+<!-- notes.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Upload Notes</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .note-entry {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  </style>
 </head>
 <body class="p-4">
   <div class="container">
     <h2 class="mb-4">Upload Lecture Notes</h2>
-    <form>
-      <input type="text" class="form-control mb-2" placeholder="Subject Name">
-      <input type="file" class="form-control mb-2">
-      <button class="btn btn-primary">Upload</button>
+    <form id="noteForm">
+      <input type="text" id="subjectInput" class="form-control mb-2" placeholder="Subject Name" required>
+      <input type="text" id="noteLinkInput" class="form-control mb-2" placeholder="Note Link or Description" required>
+      <button type="submit" class="btn btn-primary">Add Note</button>
     </form>
+
+    <h4 class="mt-4">Uploaded Notes</h4>
+    <ul id="notesList" class="list-group mt-2"></ul>
   </div>
+
+  <script>
+    const noteForm = document.getElementById('noteForm');
+    const subjectInput = document.getElementById('subjectInput');
+    const noteLinkInput = document.getElementById('noteLinkInput');
+    const notesList = document.getElementById('notesList');
+
+    noteForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const subject = subjectInput.value.trim();
+      const note = noteLinkInput.value.trim();
+
+      if (subject && note) {
+        const li = document.createElement('li');
+        li.className = 'list-group-item note-entry';
+        li.innerHTML = `<strong>${subject}:</strong> ${note}
+          <button class="btn btn-sm btn-danger ms-3" onclick="this.parentElement.remove()">Delete</button>`;
+        notesList.appendChild(li);
+
+        subjectInput.value = '';
+        noteLinkInput.value = '';
+      }
+    });
+  </script>
 </body>
 </html>
